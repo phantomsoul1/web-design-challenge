@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/latitude.css" />
-    <title>Latitude - Home</title>
+    <title>Latitude - Comparison</title>
 
     <!-- Navigation Bar - Common to all pages -->
     <nav class="navbar navbar-expand-md navbar-light bg-white p-0"> 
@@ -20,7 +20,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto mr-3">
           <li class="nav-item dropdown p-2">
-            <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Plots
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -30,8 +30,8 @@
               <a class="dropdown-item" href="windspeed.html">Wind Speed</a>
             </div>
           </li>
-          <li class="nav-item p-2">
-            <a class="nav-link" href="comparison.html">Comparison</a>
+          <li class="nav-item active p-2">
+            <a class="nav-link" href="comparison.html">Comparison<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item p-2">
             <a class="nav-link" href="data.html">Data</a>
@@ -43,45 +43,35 @@
   <body class="bg-light text-dark">
 
     <!-- ADD BODY CONTENT HERE -->
-    <div class="container">
-      <div class="row row-cols-1 row-cols-lg-2 no-gutters">
-        <div class="col-12 col-lg-8">
-          <div class="card bg-white m-3">
-            <div class="card-body">
-              <h5 class="card-title text-info latitude-heading">Summary: Latitude vs. X</h5>
-              <hr />
-              <p><img class="w-25 m-3" src="assets/images/Fig1.png" style="float: left;" />The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
-              <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
+    <div class="card bg-white m-5 p-4">
+      <div class="card-body">
+        <h5 class="card-title text-info latitude-heading py-3">Comparison: Latitude vs X</h5>
+        <hr />
+        <p class="card-body px-0 py-2">Click on any plot to get an in-depth analysis.</p>
+        <div class="container">
+          <div class="row row-cols-1 row-cols-md-2">
+            <div class="col">
+              <h6 class="text-center text-info latitude-subheading">vs. Max Temperature</h6>
+              <div class="media mb-3">
+                <a href="temperature.html"><img src="assets/images/Fig1.png" class="w-100" /></a>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="col-12 col-lg-4">
-          <div class="card bg-white m-3">
-            <div class="card-body">
-              <h6 class="card-title text-info latitude-subheading py-3">Visualizations</h6>
-              <div class="container">
-                <div class="row row-cols-4 row-cols-lg-2">
-                  <div class="col">
-                    <div class="media mb-3">
-                      <a href="temperature.html"><img src="assets/images/Fig1.png" class="w-100" /></a>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="media mb-3">
-                      <a href="humidity.html"><img src="assets/images/Fig2.png" class="w-100" /></a>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="media mb-3">
-                      <a href="cloudiness.html"><img src="assets/images/Fig3.png" class="w-100" /></a>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="media mb-3">
-                      <a href="windspeed.html"><img src="assets/images/Fig4.png" class="w-100" /></a>
-                    </div>
-                  </div>
-                </div>
+            <div class="col">
+              <h6 class="text-center text-info latitude-subheading">vs. Humidity</h6>
+              <div class="media mb-3">
+                <a href="humidity.html"><img src="assets/images/Fig2.png" class="w-100" /></a>
+              </div>
+            </div>
+            <div class="col">
+              <h6 class="text-center text-info latitude-subheading">vs. Cloudiness</h6>
+              <div class="media mb-3">
+                <a href="cloudiness.html"><img src="assets/images/Fig3.png" class="w-100" /></a>
+              </div>
+            </div>
+            <div class="col">
+              <h6 class="text-center text-info latitude-subheading">vs. Wind Speed</h6>
+              <div class="media mb-3">
+                <a href="windspeed.html"><img src="assets/images/Fig4.png" class="w-100" /></a>
               </div>
             </div>
           </div>

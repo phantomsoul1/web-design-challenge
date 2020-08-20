@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/latitude.css" />
-    <title>Latitude - Home</title>
+    <title>Latitude - Temperature</title>
 
     <!-- Navigation Bar - Common to all pages -->
     <nav class="navbar navbar-expand-md navbar-light bg-white p-0"> 
@@ -19,12 +19,12 @@
     
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto mr-3">
-          <li class="nav-item dropdown p-2">
-            <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <li class="nav-item dropdown active p-2">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Plots
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="temperature.html">Maximum Temperature</a>
+              <a class="dropdown-item active" href="temperature.html">Maximum Temperature</span></a>
               <a class="dropdown-item" href="humidity.html">Humidity</a>
               <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
               <a class="dropdown-item" href="windspeed.html">Wind Speed</a>
@@ -48,10 +48,10 @@
         <div class="col-12 col-lg-8">
           <div class="card bg-white m-3">
             <div class="card-body">
-              <h5 class="card-title text-info latitude-heading">Summary: Latitude vs. X</h5>
+              <h5 class="card-title text-info latitude-heading">Max Temperature</h5>
               <hr />
-              <p><img class="w-25 m-3" src="assets/images/Fig1.png" style="float: left;" />The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
-              <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
+              <img class="w-100 m-3" src="assets/images/Fig1.png" />
+              <p>As expected, the weather becomes significantly warmer as one approaches the equator (0 Deg. Latitude). More interestingly, however, is the fact that the southern hemisphere tends to be warmer this time of the year than the northern hemisphere. This may be due to the tilt of the earth at the time of the year this data was gathered.</p>
             </div>
           </div>
         </div>
